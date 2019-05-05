@@ -14,6 +14,7 @@ import { BusinessComponent } from './business/business.component';
 import { EntertainmentComponent } from './entertainment/entertainment.component';
 import { HealthComponent } from './health/health.component';
 import { ScienceComponent } from './science/science.component';
+import { SportsComponent } from './sports/sports.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ScienceComponent } from './science/science.component';
     BusinessComponent,
     EntertainmentComponent,
     HealthComponent,
-    ScienceComponent
+    ScienceComponent,
+    SportsComponent
   ],
   imports: [
     BrowserModule,

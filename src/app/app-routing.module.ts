@@ -7,6 +7,7 @@ import { HealthComponent } from './health/health.component';
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ScienceComponent } from './science/science.component';
+import { SportsComponent } from './sports/sports.component';
 
 const routes: Routes = [
   {
@@ -32,6 +33,10 @@ const routes: Routes = [
       {
         path: 'science',
         component: ScienceComponent
+      },
+      {
+        path: 'sports',
+        component: SportsComponent
       },
       {
         path: '**',
