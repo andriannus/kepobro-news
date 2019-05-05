@@ -1,0 +1,50 @@
+<h2 class="is-size-5 title">
+  Trending
+</h2>
+
+<hr>
+
+<progress
+  *ngIf="isLoading === true"
+  class="progress is-small is-dark"
+  max="100"
+>
+  15%
+</progress>
+
+<div *ngIf="isLoading === false">
+  <article
+    *ngFor="let article of articles"
+    class="media"
+  >
+    <figure class="media-left">
+      <p class="image is-64x64">
+        <img
+          *ngIf="!!article.urlToImage === true"
+          [src]="article.urlToImage"
+        >
+
+        <img
+          *ngIf="!!article.urlToImage === false"
+          src="https://bulma.io/images/placeholders/128x128.png"
+        >
+      </p>
+    </figure>
+
+    <div class="media-content">
+      <div
+        class="content"
+      >
+        <p>
+          <strong>{{ article.title }}</strong>
+        </p>
+
+        <span>
+          <i class="fas fa-user mr-5"></i>
+
+          {{ article.source.name }}
+        </span>
+      </div>
+    </div>
+  </article>
+</div>

@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~bulma/css/bulma.min.css";
+
+.brb-10 {
+  border-radius: 10px !important;
+}
+
+.brb-50-per {
+  border-radius: 50% !important;
+}
+
+.mb-5 {
+  margin-bottom: 5px !important;
+}
+
+.mb-10 {
+  margin-bottom: 10px !important;
+}
+
+.mr-5 {
+  margin-right: 5px !important;
+}
