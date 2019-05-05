@@ -31,6 +31,14 @@ export class NewsService {
                     );
   }
 
+  getFromEntertainmentCategory(): Observable<Response> {
+    return this.http.get<Response>(`${this.baseUrl}&category=entertainment`)
+                    .pipe(
+                      retry(3),
+                      catchError(this.handleError)
+                    );
+  }
+
   handleError(error: HttpErrorResponse) {
     if (error.error instanceof ErrorEvent) {
       console.error(`An error occurred: `, error.error.message);

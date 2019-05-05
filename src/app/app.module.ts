@@ -11,6 +11,7 @@ import { LeftSidebarComponent } from './layout/left-sidebar/left-sidebar.compone
 import { RightSidebarComponent } from './layout/right-sidebar/right-sidebar.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { BusinessComponent } from './business/business.component';
+import { EntertainmentComponent } from './entertainment/entertainment.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { BusinessComponent } from './business/business.component';
     LeftSidebarComponent,
     RightSidebarComponent,
     PageNotFoundComponent,
-    BusinessComponent
+    BusinessComponent,
+    EntertainmentComponent
   ],
   imports: [
     BrowserModule,
