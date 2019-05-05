@@ -10,6 +10,7 @@ import { NavbarComponent } from './layout/navbar/navbar.component';
 import { LeftSidebarComponent } from './layout/left-sidebar/left-sidebar.component';
 import { RightSidebarComponent } from './layout/right-sidebar/right-sidebar.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { BusinessComponent } from './business/business.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     NavbarComponent,
     LeftSidebarComponent,
     RightSidebarComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    BusinessComponent
   ],
   imports: [
     BrowserModule,

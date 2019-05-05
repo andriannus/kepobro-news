@@ -23,6 +23,14 @@ export class NewsService {
                     );
   }
 
+  getFromBusinessCategory(): Observable<Response> {
+    return this.http.get<Response>(`${this.baseUrl}&category=business`)
+                    .pipe(
+                      retry(3),
+                      catchError(this.handleError)
+                    );
+  }
+
   handleError(error: HttpErrorResponse) {
     if (error.error instanceof ErrorEvent) {
       console.error(`An error occurred: `, error.error.message);
