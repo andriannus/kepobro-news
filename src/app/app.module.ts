@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './layout/navbar/navbar.component';
 import { LeftSidebarComponent } from './layout/left-sidebar/left-sidebar.component';
 import { RightSidebarComponent } from './layout/right-sidebar/right-sidebar.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { RightSidebarComponent } from './layout/right-sidebar/right-sidebar.comp
     HomeComponent,
     NavbarComponent,
     LeftSidebarComponent,
-    RightSidebarComponent
+    RightSidebarComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
