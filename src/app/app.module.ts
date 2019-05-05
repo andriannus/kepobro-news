@@ -12,6 +12,7 @@ import { RightSidebarComponent } from './layout/right-sidebar/right-sidebar.comp
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { BusinessComponent } from './business/business.component';
 import { EntertainmentComponent } from './entertainment/entertainment.component';
+import { HealthComponent } from './health/health.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { EntertainmentComponent } from './entertainment/entertainment.component'
     RightSidebarComponent,
     PageNotFoundComponent,
     BusinessComponent,
-    EntertainmentComponent
+    EntertainmentComponent,
+    HealthComponent
   ],
   imports: [
     BrowserModule,
