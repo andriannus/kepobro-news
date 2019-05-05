@@ -8,6 +8,7 @@ import { NewsService } from '../news.service';
   templateUrl: './entertainment.component.html',
   styleUrls: ['./entertainment.component.scss']
 })
+
 export class EntertainmentComponent implements OnInit {
 
   articles: Article[];
