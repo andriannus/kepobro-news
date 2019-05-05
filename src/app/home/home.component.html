@@ -1,50 +1,63 @@
-<h2 class="is-size-5 title">
-  Trending
-</h2>
+<div class="card">
+  <header class="card-header">
+    <span class="card-header-title">
+      Trending
+    </span>
+  </header>
 
-<hr>
+  <div class="card-content">
+    <progress
+      *ngIf="isLoading === true"
+      class="progress is-small is-dark"
+      max="100"
+    >
+      15%
+    </progress>
 
-<progress
-  *ngIf="isLoading === true"
-  class="progress is-small is-dark"
-  max="100"
->
-  15%
-</progress>
-
-<div *ngIf="isLoading === false">
-  <article
-    *ngFor="let article of articles"
-    class="media"
-  >
-    <figure class="media-left">
-      <p class="image is-64x64">
-        <img
-          *ngIf="!!article.urlToImage === true"
-          [src]="article.urlToImage"
-        >
-
-        <img
-          *ngIf="!!article.urlToImage === false"
-          src="https://bulma.io/images/placeholders/128x128.png"
-        >
-      </p>
-    </figure>
-
-    <div class="media-content">
-      <div
-        class="content"
+    <div *ngIf="isLoading === false">
+      <article
+        *ngFor="let article of articles"
+        class="media"
       >
-        <p>
-          <strong>{{ article.title }}</strong>
-        </p>
+        <figure class="media-left">
+          <p class="image is-64x64">
+            <img
+              *ngIf="!!article.urlToImage === true"
+              [src]="article.urlToImage"
+            >
 
-        <span>
-          <i class="fas fa-user mr-5"></i>
+            <img
+              *ngIf="!!article.urlToImage === false"
+              src="https://bulma.io/images/placeholders/128x128.png"
+            >
+          </p>
+        </figure>
 
-          {{ article.source.name }}
-        </span>
-      </div>
+        <div class="media-content">
+          <div
+            class="content"
+          >
+            <p>
+              <strong>{{ article.title }}</strong>
+            </p>
+
+            <span>
+              <i class="fas fa-user mr-5"></i>
+
+              {{ article.source.name }}
+            </span>
+          </div>
+        </div>
+      </article>
     </div>
-  </article>
+  </div>
+
+  <footer
+    *ngIf="isLoading === false"
+    class="card-footer"
+  >
+    <div class="card-footer-item">
+      <span>All displayed</span>
+    </div>
+  </footer>
 </div>
