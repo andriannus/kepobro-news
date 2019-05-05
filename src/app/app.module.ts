@@ -13,6 +13,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { BusinessComponent } from './business/business.component';
 import { EntertainmentComponent } from './entertainment/entertainment.component';
 import { HealthComponent } from './health/health.component';
+import { ScienceComponent } from './science/science.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { HealthComponent } from './health/health.component';
     PageNotFoundComponent,
     BusinessComponent,
     EntertainmentComponent,
-    HealthComponent
+    HealthComponent,
+    ScienceComponent
   ],
   imports: [
     BrowserModule,
