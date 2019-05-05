@@ -63,6 +63,14 @@ export class NewsService {
                     );
   }
 
+  getFromTechnologyCategory(): Observable<Response> {
+    return this.http.get<Response>(`${this.baseUrl}&category=technology`)
+                    .pipe(
+                      retry(3),
+                      catchError(this.handleError)
+                    );
+  }
+
   handleError(error: HttpErrorResponse) {
     if (error.error instanceof ErrorEvent) {
       console.error(`An error occurred: `, error.error.message);
