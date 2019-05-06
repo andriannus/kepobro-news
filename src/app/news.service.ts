@@ -1,8 +1,9 @@
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
-import { Response } from 'src/interfaces/article';
+import { Article, Response } from 'src/interfaces/article';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { Router } from '@angular/router';
 import config from '../config';
 
 @Injectable({
@@ -13,7 +14,10 @@ export class NewsService {
 
   baseUrl = `https://newsapi.org/v2/top-headlines?apiKey=${config.api.key}&country=id`;
 
-  constructor(private http: HttpClient) { }
+  constructor(
+    private http: HttpClient,
+    private router: Router
+  ) { }
 
   getFromAllCategories(): Observable<Response> {
     return this.http.get<Response>(this.baseUrl)
@@ -71,6 +75,12 @@ export class NewsService {
                     );
   }
 
+  readArticle(article: Article) {
+    localStorage.setItem('article', JSON.stringify(article));
+
+    this.router.navigateByUrl('/read');
+  }
+
   handleError(error: HttpErrorResponse) {
     if (error.error instanceof ErrorEvent) {
       console.error(`An error occurred: `, error.error.message);
@@ -85,4 +95,5 @@ export class NewsService {
       'Something bad happened; please try again alter.'
     );
   }
+
 }
