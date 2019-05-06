@@ -24,11 +24,12 @@
             <img
               *ngIf="!!article.urlToImage === true"
               [src]="article.urlToImage"
+              onerror="this.src='https://bulma.io/images/placeholders/480x320.png'"
             >
 
             <img
               *ngIf="!!article.urlToImage === false"
-              src="https://bulma.io/images/placeholders/128x128.png"
+              src="https://bulma.io/images/placeholders/480x320.png"
             >
           </p>
         </figure>
@@ -38,13 +39,13 @@
             class="content"
           >
             <a (click)="readArticle(article)">
-              <p>
+              <p class="mb-10">
                 <strong>{{ article.title }}</strong>
               </p>
             </a>
 
             <span>
-              <i class="fas fa-user mr-5"></i>
+              <i class="fas fa-globe mr-5"></i>
 
               {{ article.source.name }}
             </span>
