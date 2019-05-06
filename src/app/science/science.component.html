@@ -37,9 +37,11 @@
           <div
             class="content"
           >
-            <p>
-              <strong>{{ article.title }}</strong>
-            </p>
+            <a (click)="readArticle(article)">
+              <p>
+                <strong>{{ article.title }}</strong>
+              </p>
+            </a>
 
             <span>
               <i class="fas fa-user mr-5"></i>
