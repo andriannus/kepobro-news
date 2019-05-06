@@ -1,29 +1,35 @@
-@import "~bulma/css/bulma.min.css";
+$link: #363636;
+$link-hover: #3273dc;
+$menu-item-active-background-color: #363636;
 
 .brb-10 {
-  border-radius: 10px !important;
+  border-radius: 10px;
 }
 
 .brb-50-per {
-  border-radius: 50% !important;
+  border-radius: 50%;
 }
 
 .mb-5 {
-  margin-bottom: 5px !important;
+  margin-bottom: 5px;
 }
 
 .mb-10 {
-  margin-bottom: 10px !important;
+  margin-bottom: 10px;
 }
 
 .mr-5 {
-  margin-right: 5px !important;
+  margin-right: 5px;
 }
 
 .mr-10 {
-  margin-right: 10px !important;
+  margin-right: 10px;
 }
 
 .mt-5 {
-  margin-top: 5px !important;
+  margin-top: 5px;
 }
+
+@import '~bulma/sass/utilities/_all.sass';
+@import '~bulma/sass/components/menu.sass';
+@import '~bulma/bulma.sass'
