@@ -1,6 +1,7 @@
 import { Response, Article } from 'src/interfaces/article';
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { Router } from '@angular/router';
 import { NewsService } from '../news.service';
 
 @Component({
@@ -17,6 +18,7 @@ export class SportsComponent implements OnInit {
   constructor(
     private meta: Meta,
     private newsService: NewsService,
+    private router: Router,
     private titleService: Title
   ) { }
 
@@ -79,6 +81,12 @@ export class SportsComponent implements OnInit {
           console.log(error);
         }
       );
+  }
+
+  readArticle(article: Article) {
+    this.router.navigateByUrl('/read');
+
+    localStorage.setItem('article', JSON.stringify(article));
   }
 
 }
