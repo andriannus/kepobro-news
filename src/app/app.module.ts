@@ -12,6 +12,7 @@ import { LayoutComponent } from './layout/layout.component';
 import { LeftSidebarComponent } from './layout/left-sidebar/left-sidebar.component';
 import { NavbarComponent } from './layout/navbar/navbar.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ReadComponent } from './read/read.component';
 import { RightSidebarComponent } from './layout/right-sidebar/right-sidebar.component';
 import { ScienceComponent } from './science/science.component';
 import { SportsComponent } from './sports/sports.component';
@@ -28,6 +29,7 @@ import { TechnologyComponent } from './technology/technology.component';
     LeftSidebarComponent,
     NavbarComponent,
     PageNotFoundComponent,
+    ReadComponent,
     RightSidebarComponent,
     ScienceComponent,
     SportsComponent,

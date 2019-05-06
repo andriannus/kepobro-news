@@ -1,0 +1,58 @@
+<div class="card">
+  <header class="card-header">
+    <span class="card-header-title">
+      <a
+        class="mr-10"
+        (click)="back()"
+      >
+        <span class="icon is-small">
+          <i class="fas fa-arrow-left"></i>
+        </span>
+      </a>
+
+      <span>Read</span>
+    </span>
+  </header>
+
+  <div class="card-content has-text-justified">
+    <figure class="image mb-10">
+      <img
+        [src]="article.urlToImage"
+        [alt]=""
+      >
+    </figure>
+
+    <h1 class="title is-size-5 mb-10">
+      {{ article.title }}
+    </h1>
+
+    <div class="level">
+      <div class="level-left">
+        {{ article.author }}
+      </div>
+
+      <div class="level-right">
+        {{ formattedDate }}
+      </div>
+    </div>
+
+    <p class="is-size-6">
+      {{ article.content }}
+    </p>
+  </div>
+
+  <footer class="card-footer">
+    <a
+      [href]="article.url"
+      class="card-footer-item"
+      rel="noreferrer"
+      target="blank"
+    >
+      <span>Continue Reading</span>
+
+      <span class="icon">
+        <i class="fas fa-external-link-square-alt"></i>
+      </span>
+    </a>
+  </footer>
+</div>

@@ -6,6 +6,7 @@ import { HealthComponent } from './health/health.component';
 import { LayoutComponent } from './layout/layout.component';
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ReadComponent } from './read/read.component';
 import { ScienceComponent } from './science/science.component';
 import { SportsComponent } from './sports/sports.component';
 import { TechnologyComponent } from './technology/technology.component';
@@ -42,6 +43,10 @@ const routes: Routes = [
       {
         path: 'technology',
         component: TechnologyComponent
+      },
+      {
+        path: 'read',
+        component: ReadComponent
       },
       {
         path: '**',
