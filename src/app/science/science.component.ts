@@ -1,6 +1,6 @@
 import { Response, Article } from 'src/interfaces/article';
 import { Component, OnInit } from '@angular/core';
-import { Title } from '@angular/platform-browser';
+import { Meta, Title } from '@angular/platform-browser';
 import { NewsService } from '../news.service';
 
 @Component({
@@ -15,6 +15,7 @@ export class ScienceComponent implements OnInit {
   isLoading = false;
 
   constructor(
+    private meta: Meta,
     private newsService: NewsService,
     private titleService: Title
   ) { }
@@ -22,7 +23,45 @@ export class ScienceComponent implements OnInit {
   ngOnInit() {
     this.titleService.setTitle('Science - KepoBro News');
 
+    this.setMeta();
     this.getNews();
+  }
+
+  setMeta() {
+    this.meta.addTag({
+      name: 'description',
+      content: 'Berita lengkap dan terupdate mengenai pengetahuan dari News API'
+    }, true);
+
+    this.meta.addTag({
+      name: 'title',
+      content: 'Science - KepoBro News'
+    });
+
+    this.meta.addTag({
+      name: 'og:description',
+      content: 'Berita lengkap dan terupdate mengenai pengetahuan dari News API'
+    });
+
+    this.meta.addTag({
+      name: 'og:title',
+      content: 'Science - KepoBro News'
+    });
+
+    this.meta.addTag({
+      name: 'og:url',
+      content: 'https://kepobro-news.netlify.com'
+    });
+
+    this.meta.addTag({
+      name: 'twitter:description',
+      content: 'Berita lengkap dan terupdate mengenai pengetahuan dari News API'
+    });
+
+    this.meta.addTag({
+      name: 'twitter:title',
+      content: 'Science - KepoBro News'
+    });
   }
 
   getNews() {
