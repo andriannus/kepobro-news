@@ -1,4 +1,7 @@
-<div class="card">
+<div
+  *ngIf="isNotFound === false"
+  class="card"
+>
   <header class="card-header">
     <span class="card-header-title">
       <a
@@ -59,4 +62,28 @@
       </span>
     </a>
   </footer>
+</div>
+
+<div
+  *ngIf="isNotFound === true"
+  class="has-text-centered"
+>
+  <div class="mb-10">
+    <img
+      src="assets/images/not-found.png"
+      alt="Not Found - Freepik"
+      width="40%"
+    >
+  </div>
+
+  <p class="is-size-5 mb-10">
+    <em>No article selected</em>
+  </p>
+
+  <a
+    class="button is-dark"
+    routerLink="/"
+  >
+    Back to Home
+  </a>
 </div>

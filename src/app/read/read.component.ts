@@ -12,6 +12,7 @@ import { Component, OnInit } from '@angular/core';
 export class ReadComponent implements OnInit {
 
   article: Article;
+  isNotFound = false;
 
   constructor(
     private location: Location
@@ -30,7 +31,13 @@ export class ReadComponent implements OnInit {
   getArticle() {
     const data = localStorage.getItem('article') || '';
 
-    this.article = JSON.parse(data);
+    if (!!data === true) {
+      this.isNotFound = false;
+
+      this.article = JSON.parse(data);
+    } else {
+      this.isNotFound = true;
+    }
   }
 
   back() {
