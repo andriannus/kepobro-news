@@ -1,7 +1,7 @@
 import * as moment from 'moment';
 import { Article } from 'src/interfaces/article';
+import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-read',
@@ -13,7 +13,9 @@ export class ReadComponent implements OnInit {
 
   article: Article;
 
-  constructor(private router: Router) { }
+  constructor(
+    private location: Location
+  ) { }
 
   ngOnInit() {
     this.getArticle();
@@ -34,7 +36,7 @@ export class ReadComponent implements OnInit {
   back() {
     localStorage.removeItem('article');
 
-    this.router.navigateByUrl('/');
+    this.location.back();
   }
 
 }
