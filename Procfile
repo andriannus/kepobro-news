@@ -1,1 +1,0 @@
-web: npm run build:client-and-server-bundles && npm run serve:ssr
