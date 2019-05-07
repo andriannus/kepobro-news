@@ -1,1 +1,1 @@
-web: node dist/server
+web: npm run build:client-and-server-bundles && npm run compile:server && node dist/server
