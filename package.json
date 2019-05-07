@@ -15,8 +15,8 @@
     "serve:ssr": "node dist/server",
     "build:ssr": "npm run build:client-and-server-bundles && npm run compile:server",
     "build:client-and-server-bundles": "ng build --prod && ng run kepobro-news:server:production",
-    "postinstall": "npm run build:ssr && npm run serve:ssr",
-    "heroku-postbuild": "npm run build:ssr && npm run serve:ssr"
+    "postinstall": "npm run build:ssr",
+    "heroku-postbuild": "npm run build:ssr"
   },
   "private": true,
   "dependencies": {
