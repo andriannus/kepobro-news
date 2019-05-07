@@ -45,7 +45,7 @@ export class HealthComponent implements OnInit {
 
     this.meta.setTag(
       'og:url',
-      'https://kepobro-news.netlify.com'
+      'https://kepobro-news.herokuapp.com'
     );
 
     this.meta.setTag(
