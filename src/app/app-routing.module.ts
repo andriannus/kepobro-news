@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { MetaGuard } from '@ngx-meta/core';
 import { BusinessComponent } from './business/business.component';
 import { EntertainmentComponent } from './entertainment/entertainment.component';
 import { HealthComponent } from './health/health.component';
@@ -14,6 +15,7 @@ import { TechnologyComponent } from './technology/technology.component';
 const routes: Routes = [
   {
     path: '',
+    canActivateChild: [MetaGuard],
     component: LayoutComponent,
     children: [
       {

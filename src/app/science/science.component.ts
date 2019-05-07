@@ -1,6 +1,6 @@
 import { Response, Article } from '../../interfaces/article';
 import { Component, OnInit } from '@angular/core';
-import { Meta, Title } from '@angular/platform-browser';
+import { MetaService } from '@ngx-meta/core';
 import { NewsService } from '../news.service';
 
 @Component({
@@ -15,53 +15,48 @@ export class ScienceComponent implements OnInit {
   isLoading = false;
 
   constructor(
-    private meta: Meta,
+    private meta: MetaService,
     private newsService: NewsService,
-    private titleService: Title
-  ) { }
-
-  ngOnInit() {
-    this.titleService.setTitle('Science - KepoBro News');
+  ) {
+    this.meta.setTitle('Science - KepoBro News');
 
     this.setMeta();
+  }
+
+  ngOnInit() {
     this.getNews();
   }
 
   setMeta() {
-    this.meta.addTag({
-      name: 'description',
-      content: 'Berita lengkap dan terupdate mengenai pengetahuan dari News API'
-    }, true);
+    this.meta.setTag(
+      'description',
+      'Berita lengkap dan terupdate mengenai pengetahuan dari News API'
+    );
 
-    this.meta.addTag({
-      name: 'title',
-      content: 'Science - KepoBro News'
-    });
+    this.meta.setTag(
+      'og:description',
+      'Berita lengkap dan terupdate mengenai pengetahuan dari News API'
+    );
 
-    this.meta.addTag({
-      name: 'og:description',
-      content: 'Berita lengkap dan terupdate mengenai pengetahuan dari News API'
-    });
+    this.meta.setTag(
+      'og:title',
+      'Science - KepoBro News'
+    );
 
-    this.meta.addTag({
-      name: 'og:title',
-      content: 'Science - KepoBro News'
-    });
+    this.meta.setTag(
+      'og:url',
+      'https://kepobro-news.netlify.com'
+    );
 
-    this.meta.addTag({
-      name: 'og:url',
-      content: 'https://kepobro-news.netlify.com'
-    });
+    this.meta.setTag(
+      'twitter:description',
+      'Berita lengkap dan terupdate mengenai pengetahuan dari News API'
+    );
 
-    this.meta.addTag({
-      name: 'twitter:description',
-      content: 'Berita lengkap dan terupdate mengenai pengetahuan dari News API'
-    });
-
-    this.meta.addTag({
-      name: 'twitter:title',
-      content: 'Science - KepoBro News'
-    });
+    this.meta.setTag(
+      'twitter:title',
+      'Science - KepoBro News'
+    );
   }
 
   getNews() {

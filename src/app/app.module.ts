@@ -1,6 +1,7 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { MetaModule } from '@ngx-meta/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -38,7 +39,8 @@ import { TechnologyComponent } from './technology/technology.component';
   imports: [
     AppRoutingModule,
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
-    HttpClientModule
+    HttpClientModule,
+    MetaModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
