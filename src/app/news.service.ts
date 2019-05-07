@@ -1,6 +1,6 @@
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
-import { Article, Response } from 'src/interfaces/article';
+import { Article, Response } from '../interfaces/article';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Router } from '@angular/router';

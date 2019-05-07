@@ -1,4 +1,4 @@
-import { Response, Article } from 'src/interfaces/article';
+import { Response, Article } from '../../interfaces/article';
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { NewsService } from '../news.service';

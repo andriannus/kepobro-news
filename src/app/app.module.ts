@@ -37,7 +37,7 @@ import { TechnologyComponent } from './technology/technology.component';
   ],
   imports: [
     AppRoutingModule,
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     HttpClientModule
   ],
   providers: [],

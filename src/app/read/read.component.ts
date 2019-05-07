@@ -1,5 +1,5 @@
 import * as moment from 'moment';
-import { Article } from 'src/interfaces/article';
+import { Article } from '../../interfaces/article';
 import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 
