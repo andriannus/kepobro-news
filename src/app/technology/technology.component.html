@@ -3,6 +3,16 @@
     <span class="card-header-title">
       Technology
     </span>
+
+    <a
+      *ngIf="isLoading === false"
+      class="card-header-icon"
+      (click)="getNews()"
+    >
+      <span class="icon">
+        <i class="fas fa-sync-alt"></i>
+      </span>
+    </a>
   </header>
 
   <div class="card-content">
