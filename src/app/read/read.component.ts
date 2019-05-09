@@ -2,6 +2,7 @@ import * as moment from 'moment';
 import { Article } from '../../interfaces/article';
 import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { MetaService } from '@ngx-meta/core';
 
 @Component({
   selector: 'app-read',
@@ -15,8 +16,13 @@ export class ReadComponent implements OnInit {
   isNotFound = false;
 
   constructor(
-    private location: Location
-  ) { }
+    private location: Location,
+    private meta: MetaService
+    ) {
+      this.meta.setTitle('Read News - KepoBro News');
+
+      this.setMeta();
+    }
 
   ngOnInit() {
     this.getArticle();
@@ -26,6 +32,38 @@ export class ReadComponent implements OnInit {
     moment.locale('id');
 
     return moment(this.article.publishedAt).format('dddd, Do MMMM YYYY · h:mm');
+  }
+
+  setMeta() {
+    this.meta.setTag(
+      'description',
+      'Baca berita terpilih dari News API'
+    );
+
+    this.meta.setTag(
+      'og:description',
+      'Baca berita terpilih dari News API'
+    );
+
+    this.meta.setTag(
+      'og:title',
+      'Read News - KepoBro News'
+    );
+
+    this.meta.setTag(
+      'og:url',
+      'https://kepobro-news.herokuapp.com'
+    );
+
+    this.meta.setTag(
+      'twitter:description',
+      'Baca berita terpilih dari News API'
+    );
+
+    this.meta.setTag(
+      'twitter:title',
+      'Read News - KepoBro News'
+    );
   }
 
   getArticle() {
