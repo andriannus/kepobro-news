@@ -34,6 +34,18 @@ export class ReadComponent implements OnInit {
     return moment(this.article.publishedAt).format('dddd, Do MMMM YYYY · h:mm');
   }
 
+  get formattedArticle() {
+    const { content } = this.article;
+    const tempArr = content.split('');
+    const startSub = tempArr.indexOf('[');
+    const finishSub = tempArr.indexOf(']');
+    const substractSub = Number(finishSub) - Number(startSub) + 1;
+    const findString = content.substr(startSub, substractSub);
+    const resultString = content.replace(findString, '');
+
+    return resultString;
+  }
+
   setMeta() {
     this.meta.setTag(
       'description',
