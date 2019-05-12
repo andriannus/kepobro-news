@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MetaService } from '@ngx-meta/core';
 import { LeftSidebarComponent } from './left-sidebar/left-sidebar.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { RightSidebarComponent } from './right-sidebar/right-sidebar.component';
@@ -11,10 +12,44 @@ import { RightSidebarComponent } from './right-sidebar/right-sidebar.component';
 
 export class LayoutComponent implements OnInit {
 
-  constructor() { }
+  constructor(private meta: MetaService) {
+    this.setMeta();
+  }
 
   ngOnInit() {
     window.onscroll = () => this.scroll();
+  }
+
+  setMeta() {
+    this.meta.setTag(
+      'og:image',
+      'https://kepobro-news.herokuapp.com/assets/images/logo.jpg'
+    );
+
+    this.meta.setTag(
+      'og:site_name',
+      'KepoBro News'
+    );
+
+    this.meta.setTag(
+      'og:type',
+      'site.news'
+    );
+
+    this.meta.setTag(
+      'twitter:card',
+      'summary_large_image'
+    );
+
+    this.meta.setTag(
+      'twitter:image',
+      'https://kepobro-news.herokuapp.com/assets/images/logo.jpg'
+    );
+
+    this.meta.setTag(
+      'twitter:site',
+      'KepoBro News'
+    );
   }
 
   scroll() {
