@@ -36,14 +36,19 @@ export class ReadComponent implements OnInit {
 
   get formattedArticle() {
     const { content } = this.article;
-    const tempArr = content.split('');
-    const startSub = tempArr.indexOf('[');
-    const finishSub = tempArr.indexOf(']');
-    const substractSub = Number(finishSub) - Number(startSub) + 1;
-    const findString = content.substr(startSub, substractSub);
-    const resultString = content.replace(findString, '');
 
-    return resultString;
+    if (!!content === true) {
+      const tempArr = content.split('');
+      const startSub = tempArr.indexOf('[');
+      const finishSub = tempArr.indexOf(']');
+      const substractSub = Number(finishSub) - Number(startSub) + 1;
+      const findString = content.substr(startSub, substractSub);
+      const resultString = content.replace(findString, '');
+
+      return resultString;
+    } else {
+      return '';
+    }
   }
 
   setMeta() {
