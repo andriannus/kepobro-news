@@ -2,32 +2,38 @@ $link: #363636;
 $link-hover: #3273dc;
 $menu-item-active-background-color: #363636;
 
-.bra-3 {
-  border-radius: 3px;
-}
+.bra {
+  &-3 {
+    border-radius: 3px;
+  }
 
-.brb-10 {
-  border-radius: 10px;
+  &-10 {
+    border-radius: 10px;
+  }
 }
 
 .brb-50-per {
   border-radius: 50%;
 }
 
-.mb-5 {
-  margin-bottom: 5px;
+.mb {
+  &-5 {
+    margin-bottom: 5px;
+  }
+
+  &-10 {
+    margin-bottom: 10px;
+  }
 }
 
-.mb-10 {
-  margin-bottom: 10px;
-}
+.mr {
+  &-5 {
+    margin-right: 5px;
+  }
 
-.mr-5 {
-  margin-right: 5px;
-}
-
-.mr-10 {
-  margin-right: 10px;
+  &-10 {
+    margin-right: 10px;
+  }
 }
 
 .mt-5 {
