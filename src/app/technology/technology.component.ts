@@ -12,8 +12,8 @@ import { ApiService } from '@app/shared/services/api.service';
 
 export class TechnologyComponent implements OnInit {
 
-  articles: Article[];
-  isLoading = false;
+  public articles: Article[];
+  public isLoading = false;
 
   constructor(
     private meta: MetaService,
@@ -24,11 +24,11 @@ export class TechnologyComponent implements OnInit {
     this.setMeta();
   }
 
-  ngOnInit() {
+  public ngOnInit(): void {
     this.getNews();
   }
 
-  setMeta() {
+  public setMeta(): void {
     this.meta.setTag(
       'description',
       'Berita lengkap dan terupdate mengenai teknologi dari News API'
@@ -60,7 +60,7 @@ export class TechnologyComponent implements OnInit {
     );
   }
 
-  getNews() {
+  public getNews(): void {
     this.isLoading = true;
 
     this.apiService
@@ -77,7 +77,7 @@ export class TechnologyComponent implements OnInit {
       );
   }
 
-  readArticle(article: Article) {
+  public readArticle(article: Article): void {
     this.apiService.readArticle(article);
   }
 

@@ -13,8 +13,8 @@ import { Article } from '@app/shared/consts/model.const';
 
 export class ReadComponent implements OnInit {
 
-  article: Article;
-  isNotFound = false;
+  public article: Article;
+  public isNotFound = false;
 
   constructor(
     private location: Location,
@@ -25,17 +25,17 @@ export class ReadComponent implements OnInit {
       this.setMeta();
     }
 
-  ngOnInit() {
+  public ngOnInit(): void {
     this.getArticle();
   }
 
-  get formattedDate() {
+  public get formattedDate(): string {
     moment.locale('id');
 
     return moment(this.article.publishedAt).format('dddd, Do MMMM YYYY · h:mm');
   }
 
-  get formattedArticle() {
+  public get formattedArticle(): string {
     const { content } = this.article;
 
     if (!!content === true) {
@@ -52,7 +52,7 @@ export class ReadComponent implements OnInit {
     }
   }
 
-  setMeta() {
+  public setMeta(): void {
     this.meta.setTag(
       'description',
       'Baca berita terpilih dari News API'
@@ -84,7 +84,7 @@ export class ReadComponent implements OnInit {
     );
   }
 
-  getArticle() {
+  public getArticle(): void {
     const data = localStorage.getItem('article') || '';
 
     if (!!data === true) {
@@ -96,7 +96,7 @@ export class ReadComponent implements OnInit {
     }
   }
 
-  back() {
+  public back(): void {
     localStorage.removeItem('article');
 
     this.location.back();

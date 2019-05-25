@@ -13,7 +13,7 @@ export class PageNotFoundComponent implements OnInit {
     private titleService: Title
   ) { }
 
-  ngOnInit() {
+  public ngOnInit(): void {
     this.titleService.setTitle('Page Not Found - KepoBro News');
   }
 
