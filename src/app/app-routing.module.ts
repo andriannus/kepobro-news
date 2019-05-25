@@ -1,16 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MetaGuard } from '@ngx-meta/core';
-import { BusinessComponent } from './business/business.component';
-import { EntertainmentComponent } from './entertainment/entertainment.component';
-import { HealthComponent } from './health/health.component';
-import { LayoutComponent } from './layout/layout.component';
-import { HomeComponent } from './home/home.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { ReadComponent } from './read/read.component';
-import { ScienceComponent } from './science/science.component';
-import { SportsComponent } from './sports/sports.component';
-import { TechnologyComponent } from './technology/technology.component';
+
+import { BusinessComponent } from '@app/business/business.component';
+import { EntertainmentComponent } from '@app/entertainment/entertainment.component';
+import { HealthComponent } from '@app/health/health.component';
+import { LayoutComponent } from '@app/layout/layout.component';
+import { HomeComponent } from '@app/home/home.component';
+import { PageNotFoundComponent } from '@app/page-not-found/page-not-found.component';
+import { ReadComponent } from '@app/read/read.component';
+import { ScienceComponent } from '@app/science/science.component';
+import { SportsComponent } from '@app/sports/sports.component';
+import { TechnologyComponent } from '@app/technology/technology.component';
 
 const routes: Routes = [
   {
