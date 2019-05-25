@@ -3,21 +3,22 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { MetaModule } from '@ngx-meta/core';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { BusinessComponent } from './business/business.component';
-import { EntertainmentComponent } from './entertainment/entertainment.component';
-import { HealthComponent } from './health/health.component';
-import { HomeComponent } from './home/home.component';
-import { LayoutComponent } from './layout/layout.component';
-import { LeftSidebarComponent } from './layout/left-sidebar/left-sidebar.component';
-import { NavbarComponent } from './layout/navbar/navbar.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { ReadComponent } from './read/read.component';
-import { RightSidebarComponent } from './layout/right-sidebar/right-sidebar.component';
-import { ScienceComponent } from './science/science.component';
-import { SportsComponent } from './sports/sports.component';
-import { TechnologyComponent } from './technology/technology.component';
+import { AppRoutingModule } from '@app/app-routing.module';
+import { LeftSidebarModule } from '@app/shared/components/left-sidebar/left-sidebar.module';
+import { NavbarModule } from '@app/shared/components/navbar/navbar.module';
+import { RightSidebarModule } from '@app/shared/components/right-sidebar/right-sidebar.module';
+
+import { AppComponent } from '@app/app.component';
+import { BusinessComponent } from '@app/business/business.component';
+import { EntertainmentComponent } from '@app/entertainment/entertainment.component';
+import { HealthComponent } from '@app/health/health.component';
+import { HomeComponent } from '@app/home/home.component';
+import { LayoutComponent } from '@app/layout/layout.component';
+import { PageNotFoundComponent } from '@app/page-not-found/page-not-found.component';
+import { ReadComponent } from '@app/read/read.component';
+import { ScienceComponent } from '@app/science/science.component';
+import { SportsComponent } from '@app/sports/sports.component';
+import { TechnologyComponent } from '@app/technology/technology.component';
 
 @NgModule({
   declarations: [
@@ -27,11 +28,8 @@ import { TechnologyComponent } from './technology/technology.component';
     HealthComponent,
     HomeComponent,
     LayoutComponent,
-    LeftSidebarComponent,
-    NavbarComponent,
     PageNotFoundComponent,
     ReadComponent,
-    RightSidebarComponent,
     ScienceComponent,
     SportsComponent,
     TechnologyComponent
@@ -40,7 +38,10 @@ import { TechnologyComponent } from './technology/technology.component';
     AppRoutingModule,
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     HttpClientModule,
-    MetaModule.forRoot()
+    MetaModule.forRoot(),
+    LeftSidebarModule,
+    NavbarModule,
+    RightSidebarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

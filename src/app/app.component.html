@@ -1,3 +1,29 @@
 <section class="section">
-  <router-outlet></router-outlet>
+  <app-navbar></app-navbar>
+
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <app-left-sidebar></app-left-sidebar>
+      </div>
+
+      <div class="column is-half">
+        <router-outlet></router-outlet>
+      </div>
+
+      <div class="column">
+        <app-right-sidebar></app-right-sidebar>
+      </div>
+    </div>
+  </div>
+
+  <button
+    class="button is-dark is-medium"
+    id="btnBackToTop"
+    (click)="toTop()"
+  >
+    <span class="icon">
+      <i class="fas fa-angle-double-up"></i>
+    </span>
+  </button>
 </section>
