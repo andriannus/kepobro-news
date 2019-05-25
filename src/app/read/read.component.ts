@@ -1,8 +1,9 @@
-import * as moment from 'moment';
-import { Article } from '../../interfaces/article';
 import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { MetaService } from '@ngx-meta/core';
+import * as moment from 'moment';
+
+import { Article } from '@app/shared/consts/model.const';
 
 @Component({
   selector: 'app-read',

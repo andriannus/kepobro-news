@@ -1,7 +1,8 @@
-import { Response, Article } from '../../interfaces/article';
 import { Component, OnInit } from '@angular/core';
 import { MetaService } from '@ngx-meta/core';
-import { NewsService } from '../news.service';
+
+import { Article, Response } from '@app/shared/consts/model.const';
+import { ApiService } from '@app/shared/services/api.service';
 
 @Component({
   selector: 'app-home',
@@ -16,7 +17,7 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private meta: MetaService,
-    private newsService: NewsService,
+    private apiService: ApiService,
   ) {
     this.meta.setTitle('KepoBro News - Kepoin tentang yang hits saat ini!');
 
@@ -62,8 +63,8 @@ export class HomeComponent implements OnInit {
   getNews() {
     this.isLoading = true;
 
-    this.newsService
-      .getFromAllCategories()
+    this.apiService
+      .fetchNewsData()
       .subscribe(
         (data: Response) => {
           this.articles = data.articles;
@@ -77,7 +78,7 @@ export class HomeComponent implements OnInit {
   }
 
   readArticle(article: Article) {
-    this.newsService.readArticle(article);
+    this.apiService.readArticle(article);
   }
 
 }
