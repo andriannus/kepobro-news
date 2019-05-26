@@ -18,20 +18,5 @@ export class AppComponent {
         ga('send', 'pageView');
       }
     });
-
-    window.onscroll = () => this.scroll();
-  }
-
-  public scroll(): void {
-    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-      document.getElementById('btnBackToTop').style.display = 'block';
-    } else {
-      document.getElementById('btnBackToTop').style.display = 'none';
-    }
-  }
-
-  public toTop(): void {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
   }
 }
