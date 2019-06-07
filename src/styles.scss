@@ -40,6 +40,11 @@ $menu-item-active-background-color: #363636;
   margin-top: 5px;
 }
 
+.sidebar {
+  position: sticky !important;
+  top: 62px;
+}
+
 @import '~bulma/sass/utilities/_all.sass';
 @import '~bulma/sass/components/menu.sass';
 @import '~bulma/bulma.sass';
