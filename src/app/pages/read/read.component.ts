@@ -1,7 +1,6 @@
 import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { MetaService } from '@ngx-meta/core';
-import * as moment from 'moment';
 
 import { Article } from '@app/shared/consts/model.const';
 
@@ -27,12 +26,6 @@ export class ReadComponent implements OnInit {
 
   public ngOnInit(): void {
     this.getArticle();
-  }
-
-  public get formattedDate(): string {
-    moment.locale('id');
-
-    return moment(this.article.publishedAt).format('dddd, Do MMMM YYYY · h:mm');
   }
 
   public get formattedArticle(): string {
