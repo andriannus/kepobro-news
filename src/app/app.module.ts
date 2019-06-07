@@ -11,9 +11,7 @@ import { RightSidebarModule } from '@app/shared/components/right-sidebar/right-s
 import { AppComponent } from '@app/app.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-  ],
+  declarations: [AppComponent],
   imports: [
     AppRoutingModule,
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

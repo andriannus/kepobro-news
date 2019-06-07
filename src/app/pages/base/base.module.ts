@@ -1,74 +1,74 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import { LayoutComponent } from '@app/layout/layout.component';
+import { BaseComponent } from '@app/pages/base/base.component';
 
 @NgModule({
-  declarations: [LayoutComponent],
+  declarations: [BaseComponent],
   imports: [
     CommonModule,
     RouterModule.forChild([
       {
         path: '',
-        component: LayoutComponent,
+        component: BaseComponent,
         children: [
           {
             path: '',
-            loadChildren: '@app/news/news.module#NewsModule',
+            loadChildren: '@app/pages/news/news.module#NewsModule',
             data: {
               category: 0
             }
           },
           {
             path: 'business',
-            loadChildren: '@app/news/news.module#NewsModule',
+            loadChildren: '@app/pages/news/news.module#NewsModule',
             data: {
               category: 1
             }
           },
           {
             path: 'entertainment',
-            loadChildren: '@app/news/news.module#NewsModule',
+            loadChildren: '@app/pages/news/news.module#NewsModule',
             data: {
               category: 2
             }
           },
           {
             path: 'health',
-            loadChildren: '@app/news/news.module#NewsModule',
+            loadChildren: '@app/pages/news/news.module#NewsModule',
             data: {
               category: 3
             }
           },
           {
             path: 'science',
-            loadChildren: '@app/news/news.module#NewsModule',
+            loadChildren: '@app/pages/news/news.module#NewsModule',
             data: {
               category: 4
             }
           },
           {
             path: 'sports',
-            loadChildren: '@app/news/news.module#NewsModule',
+            loadChildren: '@app/pages/news/news.module#NewsModule',
             data: {
               category: 5
             }
           },
           {
             path: 'technology',
-            loadChildren: '@app/news/news.module#NewsModule',
+            loadChildren: '@app/pages/news/news.module#NewsModule',
             data: {
               category: 6
             }
           },
           {
             path: 'read',
-            loadChildren: '@app/read/read.module#ReadModule'
+            loadChildren: '@app/pages/read/read.module#ReadModule'
           },
           {
             path: '**',
-            loadChildren: '@app/page-not-found/page-not-found.module#PageNotFoundModule'
+            loadChildren: '@app/pages/page-not-found/page-not-found.module#PageNotFoundModule'
           }
         ]
       }
@@ -77,4 +77,4 @@ import { LayoutComponent } from '@app/layout/layout.component';
   providers: [],
 })
 
-export class LayoutModule {}
+export class BaseModule {}

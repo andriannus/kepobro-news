@@ -6,7 +6,7 @@ const routes: Routes = [
   {
     path: '',
     canActivateChild: [MetaGuard],
-    loadChildren: '@app/layout/layout.module#LayoutModule'
+    loadChildren: '@app/pages/base/base.module#BaseModule'
   }
 ];
 

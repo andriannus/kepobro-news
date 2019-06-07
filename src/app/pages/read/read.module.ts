@@ -1,8 +1,8 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import { ReadComponent } from '@app/read/read.component';
+import { ReadComponent } from '@app/pages/read/read.component';
 
 @NgModule({
   declarations: [ReadComponent],
