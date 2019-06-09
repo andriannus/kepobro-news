@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 import { RightSidebarComponent } from './right-sidebar.component';
 
 @NgModule({
   declarations: [RightSidebarComponent],
-  imports: [CommonModule, RouterModule],
+  imports: [RouterModule],
   providers: [],
   exports: [RightSidebarComponent],
 })
