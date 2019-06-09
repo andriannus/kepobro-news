@@ -2,19 +2,15 @@ $link: #363636;
 $link-hover: #3273dc;
 $menu-item-active-background-color: #363636;
 
+$list-font: Bold BoldItalic Thin ThinItalic Light LightItalic Medium MediumItalic Italic Regular;
+
 @font-face {
   font-family: 'Roboto';
   font-display: 'swap';
-  src: url('/assets/fonts/roboto/Roboto-Bold.ttf') format('truetype');
-  src: url('/assets/fonts/roboto/Roboto-BoldItalic.ttf') format('truetype');
-  src: url('/assets/fonts/roboto/Roboto-Thin.ttf') format('truetype');
-  src: url('/assets/fonts/roboto/Roboto-ThinItalic.ttf') format('truetype');
-  src: url('/assets/fonts/roboto/Roboto-Light.ttf') format('truetype');
-  src: url('/assets/fonts/roboto/Roboto-LightItalic.ttf') format('truetype');
-  src: url('/assets/fonts/roboto/Roboto-Medium.ttf') format('truetype');
-  src: url('/assets/fonts/roboto/Roboto-MediumItalic.ttf') format('truetype');
-  src: url('/assets/fonts/roboto/Roboto-Italic.ttf') format('truetype');
-  src: url('/assets/fonts/roboto/Roboto-Regular.ttf') format('truetype');
+
+  @each $font in $list-font {
+    src: url('/assets/fonts/roboto/Roboto-#{$font}.ttf') format('truetype');
+  }
 }
 
 .bra {
