@@ -9,6 +9,10 @@ export interface Article {
   urlToImage: string;
 }
 
+export interface GoogleAnalytics {
+  (action: string, field: string, url?: string);
+}
+
 export interface Response {
   articles: Article[];
   status: string;

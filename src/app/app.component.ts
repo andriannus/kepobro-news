@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 
-declare let ga: (action: string, field: string, url?: string) => void;
+import { GoogleAnalytics } from '@app/shared/consts/model.const';
+
+declare let ga: GoogleAnalytics;
 
 @Component({
   selector: 'app-root',
@@ -19,4 +21,5 @@ export class AppComponent {
       }
     });
   }
+
 }

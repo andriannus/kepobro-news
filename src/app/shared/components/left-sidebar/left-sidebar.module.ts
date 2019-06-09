@@ -9,4 +9,5 @@ import { LeftSidebarComponent } from './left-sidebar.component';
   providers: [],
   exports: [LeftSidebarComponent],
 })
+
 export class LeftSidebarModule {}
