@@ -9,13 +9,13 @@ export interface Article {
   urlToImage: string;
 }
 
-export interface Source {
-  id: string | null;
-  name: string;
-}
-
 export interface Response {
   articles: Article[];
   status: string;
   totalResults: number;
+}
+
+export interface Source {
+  id: string | null;
+  name: string;
 }
